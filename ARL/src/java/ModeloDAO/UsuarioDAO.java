@@ -76,7 +76,7 @@ public class UsuarioDAO extends Conexion implements Crud {
 
         try {
 
-            sql = "insert  into Usuario (idUsuario,idTipoDoc,idRol,idCargo,"
+            sql = "insert into Usuario(idUsuario,idTipoDoc,idRol,idCargo,"
                     + "idAFP,idARP,idEPS,idMunicipio,"
                     + "tipoSangre,nombreUsuario,apellidoUsuario,noDocumentoUsuario,"
                     + "telefonoUsuario,correoUsuario,fechaNaciUsuario,estado,contraseñaUsuario,"
@@ -178,21 +178,26 @@ public class UsuarioDAO extends Conexion implements Crud {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public UsuarioVO consultarUsuario(String placa) {
-        UsuarioVO vehVO = null; 
+    public UsuarioVO consultarUsuario(String DocumentoUsuario) {
+        UsuarioVO usuVO = null; 
 
         try {
             conexion = this.obtenerConexion();
-            sql = "select * from usuario where , ";
+            sql = "select * from usuario where noDocumentoUsuario=? ";
             puente = conexion.prepareStatement(sql);
-            puente.setString(1, placa);
+            puente.setString(1, DocumentoUsuario);
             mensajero = puente.executeQuery();
             
             while (mensajero.next()) {
-               /* vehVO = new UsuarioVO(idUsuario, mensajero.getString(2),
+                   usuVO = new UsuarioVO(idUsuario, mensajero.getString(2),
                         mensajero.getString(3), mensajero.getString(4),
                         mensajero.getString(5), mensajero.getString(6),
-                        mensajero.getString(7));*/
+                        mensajero.getString(7), mensajero.getString(8), mensajero.getString(9)
+                   , mensajero.getString(10), mensajero.getString(11), mensajero.getString(12)
+                   , mensajero.getString(13), mensajero.getString(14), mensajero.getString(15)
+                   , mensajero.getString(16), mensajero.getString(17), mensajero.getString(18)
+                   , mensajero.getString(19), mensajero.getString(20), mensajero.getString(21)
+                   , mensajero.getString(22),mensajero.getString(23));
             }
         } catch (SQLException e) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, e);
@@ -204,7 +209,7 @@ public class UsuarioDAO extends Conexion implements Crud {
                 Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, e);
             }
         }
-        return vehVO;
+        return usuVO;
     }
 
 

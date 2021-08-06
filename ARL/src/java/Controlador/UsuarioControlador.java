@@ -75,7 +75,7 @@ public class UsuarioControlador extends HttpServlet {
                     request.setAttribute("mensajeError", "El Usuario NO se registró correctamente");
 
                 }
-                request.getRequestDispatcher("ConsultarUsuario.jsp").forward(request, response);
+                request.getRequestDispatcher("Registrarusuario.jsp").forward(request, response);
                 break;
             case 2: //Actualizar Registro
 
@@ -91,10 +91,10 @@ public class UsuarioControlador extends HttpServlet {
                 usuVO = usuDAO.consultarUsuario(noDocumentoUsuario);
                 if (usuVO != null) {
                     request.setAttribute("vehiculo", usuVO);
-                    request.getRequestDispatcher("actualizarVehiculo.jsp").forward(request, response);
+                    request.getRequestDispatcher("ActualizarUsuario.jsp").forward(request, response);
                 } else {
                     request.setAttribute("mensajeError", "El vehículo  NO exite");
-                    request.getRequestDispatcher("consultarVehiculo.jsp").forward(request, response);
+                    request.getRequestDispatcher("ConsultarUsuario.jsp").forward(request, response);
                 }
                 break;
 

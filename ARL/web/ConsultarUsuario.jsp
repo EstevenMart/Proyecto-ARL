@@ -16,7 +16,7 @@
     <body>
         <center>
         <h1>Usuario</h1>
-        <form method="POST" action="Vehiculo">
+        <form method="POST" action="Usuario">
             <table>
                 <tr>
                     <th>

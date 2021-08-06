@@ -126,8 +126,8 @@
                                 Aprendiz</option>
                             <option value="2">Independiente</option>
                         </select><br><br>
-                      Tipo de Vinculacion<br>
-                        <select class="form-select" aria-label="Default select example" name="textMunicipio">
+                      AFP<br>
+                        <select class="form-select" aria-label="Default select example" name="textAFP">
                           <option value="0">Seleccione...</option>
                                <%                                AFPDAO afpDAO = new AFPDAO();
                                 for (AFPVO afpVO : afpDAO.listar()) {
@@ -135,8 +135,8 @@
                             <option value="<%=afpVO.getIdAFP()%>"><%=afpVO.getDenominacionAFP()%></option>
                             <%}%>
                         </select><br><br>
-                         municipio<br>
-                         <select class="form-select" aria-label="Default select example" name="textRol">
+                         Municipio<br>
+                         <select class="form-select" aria-label="Default select example" name="textMunicipio">
                             <option value="0">Seleccione...</option>
                                <%                                MunicipioDAO municipioDAO = new MunicipioDAO();
                                 for (MunicipioVO municipioVO : municipioDAO.listar()) {
@@ -153,8 +153,7 @@
                             %>
                             <option value="<%=arpVO.getIdARP()%>"><%=arpVO.getDenominacionAFP()%></option>
                             <%}%>
-                        </select>
-                        <br><br>
+                        </select><br><br>
                         EPS<br>
                         <select class="form-select" aria-label="Default select example" name="textEPS">
                             <option value="0">Seleccione...</option>
@@ -163,7 +162,7 @@
                             %>
                             <option value="<%=epsVO.getIdEPS()%>"><%=epsVO.getDenominacionEPS()%></option>
                             <%}%>
-                        </select>
+                        </select><br><br>
                        
                     </th>
                 </tr>
