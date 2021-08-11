@@ -85,15 +85,15 @@ public class UsuarioControlador extends HttpServlet {
                     request.setAttribute("mensajeError", "El Usuario  NO se actualizó correctamente");
 
                 }
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+                request.getRequestDispatcher("ConsultarUsuario.jsp").forward(request, response);
                 break;
             case 3:
                 usuVO = usuDAO.consultarUsuario(noDocumentoUsuario);
                 if (usuVO != null) {
-                    request.setAttribute("vehiculo", usuVO);
+                    request.setAttribute("Usuario", usuVO);
                     request.getRequestDispatcher("ActualizarUsuario.jsp").forward(request, response);
                 } else {
-                    request.setAttribute("mensajeError", "El vehículo  NO exite");
+                    request.setAttribute("mensajeError", "El Usuario NO exite");
                     request.getRequestDispatcher("ConsultarUsuario.jsp").forward(request, response);
                 }
                 break;
