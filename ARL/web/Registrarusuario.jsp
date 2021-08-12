@@ -39,31 +39,38 @@
             </div>
             <ul class="nav-links">
                 <li>
-                    <a href="#" >
+                    <a href="Menu.jsp" >
                         <i class='bx bx-grid-alt' ></i>
-                        <span class="links_name">Usuario</span>
+                        <span class="links_name">Menu</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="active">
+                    <a href="Registrarusuario.jsp" class="active">
                         <i  class='bx bx-box'style="color: black;" ></i>
                         <span class="links_name" style="color: black;">Registrar usuario</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="ConsultarUsuario.jsp">
                         <i class='bx bx-list-ul' ></i>
+                        <span class="links_name">Consultar usuario</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ActualizarUsuario.jsp">
+                        <i class='bx bx-pie-chart-alt-2' ></i>
+                        <span class="links_name">Actualizar Usuario</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-coin-stack' ></i>
                         <span class="links_name">Accidente</span>
                     </a>
                 </li>
+
                 <!--<li>
-                  <a href="#">
-                    <i class='bx bx-pie-chart-alt-2' ></i>
-                    <span class="links_name">Analytics</span>
-                  </a>
-                </li>
-                <li>
                   <a href="#">
                     <i class='bx bx-coin-stack' ></i>
                     <span class="links_name">Stock</span>
@@ -120,154 +127,8 @@
                 <div class="profile-details">
                     <img src="portada-foto-perfil-redes-sociales-consejos.jpg" alt="">
                     <span class="admin_name">Administrador</span>
-                    <!-- <i class='bx bx-chevron-down' ></i> -->
                 </div>
             </nav>
-            <!-- <div class="home-content">
-              <div class="overview-boxes">
-                <div class="box"> 
-                  <div class="right-side">
-                    <div class="box-topic"><a href="">Reportes nuevos</a> </div>
-                    <div class="number">8</div>
-                   
-                  </div>
-                  
-                  <i class="fas fa-pencil-alt cart four"></i>
-                </div>
-                
-                <div class="box"> 
-                  <div class="right-side">
-                    <div class="box-topic"><a href="">Reportes en proceso</a> </div>
-                    <div class="number">2</div>
-                    
-                  </div>
-                  <i class="fas fa-pencil-ruler cart "></i>
-                 </div>
-              
-                <div class="box">
-                  
-                  <div class="right-side">
-                    <div class="box-topic"><a href="">Reportes realizados</a> </div>
-                    <div class="number">789</div>
-                    
-                  </div>
-                  <i class="fas fa-tasks cart two "></i>
-                  
-                </div>
-                <div class="box"> 
-                  <div class="right-side">
-                    <div class="box-topic"><a href="">Total de reportes</a> </div>
-                    <div class="number">800</div>
-                   
-                  </div>
-                  <i class="far fa-clipboard cart three"></i>
-                  
-                  
-                 </div>
-              </div> -->
-
-
-
-            <!-- <div class="sales-boxes">
-              <div class="recent-sales box">
-                <div class="title">Recent Sales</div>
-                <div class="sales-details">
-                  <ul class="details">
-                    <li class="topic">Date</li>
-                    <li><a href="#">02 Jan 2021</a></li>
-                    <li><a href="#">02 Jan 2021</a></li>
-                    <li><a href="#">02 Jan 2021</a></li>
-                    <li><a href="#">02 Jan 2021</a></li>
-                    <li><a href="#">02 Jan 2021</a></li>
-                    <li><a href="#">02 Jan 2021</a></li>
-                    <li><a href="#">02 Jan 2021</a></li>
-                      <li><a href="#">02 Jan 2021</a></li>
-                      <li><a href="#">02 Jan 2021</a></li>
-                    
-                  </ul>
-                  <ul class="details">
-                  <li class="topic">Customer</li>
-                  <li><a href="#">Alex Doe</a></li>
-                  <li><a href="#">David Mart</a></li>
-                  <li><a href="#">Roe Parter</a></li>
-                  <li><a href="#">Diana Penty</a></li>
-                  <li><a href="#">Martin Paw</a></li>
-                  <li><a href="#">Doe Alex</a></li>
-                  <li><a href="#">Aiana Lexa</a></li>
-                  <li><a href="#">Rexel Mags</a></li>
-                   <li><a href="#">Tiana Loths</a></li>
-                   
-                </ul>
-                <ul class="details">
-                  <li class="topic">Sales</li>
-                  <li><a href="#">Delivered</a></li>
-                  <li><a href="#">Pending</a></li>
-                  <li><a href="#">Returned</a></li>
-                  <li><a href="#">Delivered</a></li>
-                  <li><a href="#">Pending</a></li>
-                  <li><a href="#">Returned</a></li>
-                  <li><a href="#">Delivered</a></li>
-                   <li><a href="#">Pending</a></li>
-                  <li><a href="#">Delivered</a></li>
-                </ul>
-                <ul class="details">
-                  <li class="topic">Total</li>
-                  <li><a href="#">$204.98</a></li>
-                  <li><a href="#">$24.55</a></li>
-                  <li><a href="#">$25.88</a></li>
-                  <li><a href="#">$170.66</a></li>
-                  <li><a href="#">$56.56</a></li>
-                  <li><a href="#">$44.95</a></li>
-                  <li><a href="#">$67.33</a></li>
-                   <li><a href="#">$23.53</a></li>
-                   <li><a href="#">$46.52</a></li>
-                </ul>
-                </div>
-                <div class="button">
-                  <a href="#">See All</a>
-                </div>
-              </div>
-            
-            </div>
-            <div class="overview-boxes">
-              <div class="box"> 
-                <div class="right-side">
-                  <div class="box-topic"><a href="">Reportes nuevos</a> </div>
-                  <div class="number">8</div>
-                 
-                </div>
-                
-                <i class="fas fa-pencil-alt cart four"></i>
-              </div>
-              
-              <div class="box"> 
-                <div class="right-side">
-                  <div class="box-topic"><a href="">Reportes en proceso</a> </div>
-                  <div class="number">2</div>
-                  
-                </div>
-                <i class="fas fa-pencil-ruler cart "></i>
-               </div>
-            
-              <div class="box">
-                
-                <div class="right-side">
-                  <div class="box-topic"><a href="">Reportes realizados</a> </div>
-                  <div class="number">789</div>
-                  
-                </div>
-                <i class="fas fa-tasks cart two "></i>
-                
-              </div>
-              <div class="box"> 
-                <div class="right-side">
-                  <div class="box-topic"><a href="">Total de reportes</a> </div>
-                  <div class="number">800</div>
-                 
-                </div>
-                <i class="far fa-clipboard cart three"></i> -->
-
-
 
             <center>
                 </br></br> </br></br></br>
@@ -416,9 +277,6 @@
 
                     <br>                    <br>
 
-                    <button type="button" class="btn btn-light"><a href="ConsultarUsuario.jsp">Consultar Usuario</a></button><br><br>
-
-
                 </form>
 
                 <div>
@@ -432,23 +290,19 @@
 
             </center>
 
-        </div>
-    </div>
-</div>
+        </section>
 
-</section>
+        <script>
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".sidebarBtn");
+            sidebarBtn.onclick = function () {
+                sidebar.classList.toggle("active");
+                if (sidebar.classList.contains("active")) {
+                    sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+                } else
+                    sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        </script>
 
-<script>
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".sidebarBtn");
-    sidebarBtn.onclick = function () {
-        sidebar.classList.toggle("active");
-        if (sidebar.classList.contains("active")) {
-            sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-        } else
-            sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-    }
-</script>
-
-</body>
+    </body>
 </html>
