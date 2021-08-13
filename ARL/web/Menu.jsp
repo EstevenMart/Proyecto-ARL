@@ -39,10 +39,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="ActualizarUsuario.jsp">
-                        <i class='bx bx-pie-chart-alt-2' ></i>
-                        <span class="links_name">Actualizar Usuario</span>
-                    </a>
+                  <a href="Cargo.jsp">
+                    <i class='bx bx-coin-stack' ></i>
+                    <span class="links_name">Cargo</span>
+                  </a>
                 </li>
                 <li>
                     <a href="#">
@@ -81,7 +81,7 @@
                   </a>
                 </li>-->
                 <li class="log_out">
-                    <a href="#">
+                    <a href="Index.jsp">
                         <i class='bx bx-log-out'></i>
                         <span class="links_name">Salir</span>
                     </a>

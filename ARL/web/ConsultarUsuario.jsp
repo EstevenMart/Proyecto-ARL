@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="ModeloDAO.UsuarioDAO"%>
+<%@page import="ModeloVO.UsuarioVO"%>
 <!DOCTYPE html>
 <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
@@ -39,9 +42,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="ActualizarUsuario.jsp">
-                        <i class='bx bx-pie-chart-alt-2' ></i>
-                        <span class="links_name">Actualizar Usuario</span>
+                    <a href="Cargo.jsp">
+                        <i class='bx bx-coin-stack' ></i>
+                        <span class="links_name">Cargo</span>
                     </a>
                 </li>
                 <li>
@@ -81,7 +84,7 @@
                   </a>
                 </li>-->
                 <li class="log_out">
-                    <a href="#">
+                    <a href="Index.jsp">
                         <i class='bx bx-log-out'></i>
                         <span class="links_name">Salir</span>
                     </a>
@@ -129,7 +132,89 @@
                     <div style="color: cyan">${mensajeExito}</div>
                     <%}%>
                 </div><br><br>
-                <button type="button" class="btn btn-light"><a href="menu.jsp">Menu</a></button>
+                <form>
+                    <table class="table table-hover table-bordered">
+                        <tr class="alert alert-dark" role="alert">
+                            <th>Nombre </th>
+                            <th>Apellido</th>
+                            <th>Tipo Documento</th>
+                            <th>Numero de Documento</th>
+                            <th>Rol</th>
+                            <th>Cargo</th>
+                            <th>Tipo de Sangre</th>
+                            <th>Telefono</th>
+                            <th>Correo Electronica</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Estado</th>
+                            <th>Sexo</th>
+                            <th>Direccion</th>
+                            <th>Jornada</th>
+                            <th>Fecha de Ingreso a la Empresa</th>
+                            <th>Tipo de Vinculacion</th>
+                            <th>AFP</th>
+                            <th>Municipio</th>
+                            <th>ARP</th>
+                            <th>EPS</th>
+                        </tr>
+                        <%
+                            UsuarioVO usuVO = new UsuarioVO();
+                            UsuarioDAO usuDAO = new UsuarioDAO();
+                            ArrayList<UsuarioVO> listaUsuario = usuDAO.listar();
+                            for (int i = 0; i < listaUsuario.size(); i++) {
+
+                                usuVO = listaUsuario.get(i);
+
+                        %>
+                        <tr class="alert alert-primary">
+                            <td><%=usuVO.getNombreUsuario()%></td>
+                            <td><%=usuVO.getApellidoUsuario()%></td>
+                            <td><%=usuVO.getIdTipoDoc()%></td>
+                            <td><%=usuVO.getNoDocumentoUsuario()%></td>
+                            <td><%=usuVO.getIdRol()%></td>
+                            <td><%=usuVO.getIdCargo()%></td>
+                            <td><%=usuVO.getTipoSangre()%></td>
+                            <td><%=usuVO.getTelefonoUsuario()%></td>
+                            <td><%=usuVO.getCorreoUsuario()%></td>
+                            <td><%=usuVO.getFechaNaciUsuario()%></td>
+                            <td><%=usuVO.getEstado()%></td>
+                            <td><%=usuVO.getSexo()%></td>
+                            <td><%=usuVO.getDireccion()%></td>
+                            <td><%=usuVO.getJornada()%></td>
+                            <td><%=usuVO.getFechaIngresoEmpresa()%></td>
+                            <td><%=usuVO.getTipoDeVinculacion()%></td>
+                            <td><%=usuVO.getIdAFP()%></td>
+                            <td><%=usuVO.getIdMunicipio()%></td>
+                            <td><%=usuVO.getIdARP()%></td>
+                            <td><%=usuVO.getIdEPS()%></td>
+
+                        </tr>
+                        <%}%>
+                        <tr class="alert alert-dark" role="alert">
+                            <th>Nombre </th>
+                            <th>Apellido</th>
+                            <th>Tipo Documento</th>
+                            <th>Numero de Documento</th>
+                            <th>Rol</th>
+                            <th>Cargo</th>
+                            <th>Tipo de Sangre</th>
+                            <th>Telefono</th>
+                            <th>Correo Electronica</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Estado</th>
+                            <th>Sexo</th>
+                            <th>Direccion</th>
+                            <th>Jornada</th>
+                            <th>Fecha de Ingreso a la Empresa</th>
+                            <th>Tipo de Vinculacion</th>
+                            <th>AFP</th>
+                            <th>Municipio</th>
+                            <th>ARP</th>
+                            <th>EPS</th>
+                        </tr>
+                    </table>
+                </form>
+                <br>
+
             </center>
 
         </section>

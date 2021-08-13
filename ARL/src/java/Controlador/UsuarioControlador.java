@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -87,7 +88,7 @@ public class UsuarioControlador extends HttpServlet {
                 }
                 request.getRequestDispatcher("ConsultarUsuario.jsp").forward(request, response);
                 break;
-            case 3:
+            case 3://Consultar Usuario
                 usuVO = usuDAO.consultarUsuario(noDocumentoUsuario);
                 if (usuVO != null) {
                     request.setAttribute("Usuario", usuVO);
@@ -96,6 +97,23 @@ public class UsuarioControlador extends HttpServlet {
                     request.setAttribute("mensajeError", "El Usuario NO exite");
                     request.getRequestDispatcher("ConsultarUsuario.jsp").forward(request, response);
                 }
+                break;
+            case 4: //Iniciar Sesión
+                if (usuDAO.iniciarSesion(loginUsuario, contraseñaUsuario)) {
+
+                    HttpSession miSesion = request.getSession(true);
+                    usuVO = new UsuarioVO(idUsuario, idTipoDoc, idRol, idCargo, idAFP, idARP,
+                            idEPS, idMunicipio, tipoSangre, nombreUsuario, apellidoUsuario, noDocumentoUsuario,
+                            telefonoUsuario, correoUsuario, fechaNaciUsuario, estado, contraseñaUsuario, loginUsuario,
+                            sexo, direccion, jornada, fechaIngresoEmpresa, tipoDeVinculacion);
+                    miSesion.setAttribute("datos", usuVO);
+                    request.getRequestDispatcher("Menu.jsp").forward(request, response);
+
+                } else {
+                    request.setAttribute("mensajeError", "Datos de inicio de sesion incorrectos");
+                    request.getRequestDispatcher("Index.jsp").forward(request, response);
+                }
+
                 break;
 
         }

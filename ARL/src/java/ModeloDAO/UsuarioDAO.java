@@ -9,6 +9,7 @@ import ModeloVO.UsuarioVO;
 import Util.Conexion;
 import Util.Crud;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -210,6 +211,63 @@ public class UsuarioDAO extends Conexion implements Crud {
             }
         }
         return usuVO;
+    }
+    
+    public boolean iniciarSesion(String loginUsuario, String contraseñaUsuario) {
+
+        try {
+            conexion = this.obtenerConexion();
+            sql = "select * from usuario where loginUsuario=? or contraseñaUsuario=?;";
+            puente = conexion.prepareStatement(sql);
+            puente.setString(1, loginUsuario);
+            puente.setString(2, contraseñaUsuario);
+            mensajero = puente.executeQuery();
+            if (mensajero.next()) {
+                operacion = true;
+            }
+        } catch (SQLException e) {
+            Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException e) {
+                Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+        return operacion;
+    }
+    public ArrayList<UsuarioVO> listar() {
+        ArrayList<UsuarioVO> listaUsuario = new ArrayList<>();
+        try {
+            conexion = this.obtenerConexion();
+            sql = "select * from usuario";
+            puente = conexion.prepareStatement(sql);
+            mensajero = puente.executeQuery();
+            while (mensajero.next()) {
+
+                UsuarioVO usuVO = new UsuarioVO(mensajero.getString(1), mensajero.getString(2),
+                        mensajero.getString(3), mensajero.getString(4),
+                        mensajero.getString(5), mensajero.getString(6),
+                        mensajero.getString(7), mensajero.getString(8), mensajero.getString(9),
+                        mensajero.getString(10), mensajero.getString(11), mensajero.getString(12),
+                        mensajero.getString(13), mensajero.getString(14), mensajero.getString(15),
+                        mensajero.getString(16), mensajero.getString(17), mensajero.getString(18),
+                        mensajero.getString(19), mensajero.getString(20), mensajero.getString(21),
+                        mensajero.getString(22), mensajero.getString(23));
+                listaUsuario.add(usuVO);
+
+            }
+        } catch (SQLException e) {
+            Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, e);
+
+        }finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException e) {
+                Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+        return listaUsuario;   
     }
 
 }

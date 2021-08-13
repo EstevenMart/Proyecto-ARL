@@ -58,10 +58,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="ActualizarUsuario.jsp">
-                        <i class='bx bx-pie-chart-alt-2' ></i>
-                        <span class="links_name">Actualizar Usuario</span>
-                    </a>
+                  <a href="Cargo.jsp">
+                    <i class='bx bx-coin-stack' ></i>
+                    <span class="links_name">Cargo</span>
+                  </a>
                 </li>
                 <li>
                     <a href="#">
@@ -107,7 +107,7 @@
                   </a>
                 </li>-->
                 <li class="log_out">
-                    <a href="#">
+                    <a href="Index.jsp">
                         <i class='bx bx-log-out'></i>
                         <span class="links_name">Salir</span>
                     </a>
@@ -271,7 +271,7 @@
                                 </th>
                             </tr>
 
-                        </table>
+                        </table><br>
 
                         <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Actualizar Usuario</button>
                         <input class="btn btn-danger btn-block" type="hidden" value="2" name="opcion">
@@ -279,7 +279,6 @@
                     <%}%>
 
                     <br>
-                    <button type="button" class="btn btn-light"><a href="ConsultarUsuario.jsp">Consultar Usuario</a></button><br><br>
 
                     </center>
                     </section>
